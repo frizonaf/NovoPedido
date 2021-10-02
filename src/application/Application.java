@@ -27,7 +27,7 @@ public class Application {
 		
 		Cliente cliente = new Cliente(nomeCliente, dataNascimento);
 		
-		System.out.println("Status: ");
+		System.out.print("Status: ");
 		StatusPedido status = StatusPedido.valueOf(sc.next());
 		
 		Pedido pedido = new Pedido(new Date(), status, cliente);
@@ -49,6 +49,7 @@ public class Application {
 			int quantidade = sc.nextInt();
 			
 			ItemDoPedido iten = new ItemDoPedido(produto, quantidade, precoProduto);
+			pedido.addItem(iten);
 		}
 		System.out.println();
 		System.out.println("Resumo da compra:");

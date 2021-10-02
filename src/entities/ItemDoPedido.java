@@ -1,5 +1,7 @@
 package entities;
 
+import java.text.DecimalFormat;
+
 public class ItemDoPedido {
 
 	private Produto produto;
@@ -43,11 +45,11 @@ public class ItemDoPedido {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("[produto = " + produto + ", " + quantidade + ", $");
+		sb.append("[" + produto + ", " + quantidade + " unid, R$ ");
 		sb.append(String.format("%.2f", preco));
-		sb.append("]");
-		sb.append("Subtotal: ");
-		sb.append(String.format("%.2f", subTotal()));
+		sb.append("] ");
+		sb.append(" Subtotal: ");
+		sb.append(String.format("%.2f",subTotal()));
 		return sb.toString();
 	}
 	

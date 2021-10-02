@@ -1,5 +1,6 @@
 package entities;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -59,6 +60,7 @@ public class Pedido {
 	public double total() {
 		double sum = 0.0;
 		for (ItemDoPedido i: itens) {
+			System.out.println(i.toString());
 			sum += i.subTotal();
 		}
 		return sum;
